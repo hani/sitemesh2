@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="test lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/testsuite/lib/crimson.jar!/" />
+      <root url="jar://$PROJECT_DIR$/testsuite/lib/commons-logging.jar!/" />
+      <root url="jar://$PROJECT_DIR$/testsuite/lib/jetty-4.2.21.jar!/" />
+      <root url="jar://$PROJECT_DIR$/testsuite/lib/cargo-core-uberjar-0.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/testsuite/lib/junit-3.8.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/testsuite/lib/cargo-ant-0.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/testsuite/lib/jtidy.jar!/" />
+      <root url="jar://$PROJECT_DIR$/testsuite/lib/ant-1.6.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/testsuite/lib/jasper-compiler.jar!/" />
+      <root url="jar://$PROJECT_DIR$/testsuite/lib/log4j-core.jar!/" />
+      <root url="jar://$PROJECT_DIR$/testsuite/lib/jaxp.jar!/" />
+      <root url="jar://$PROJECT_DIR$/testsuite/lib/electricxml.jar!/" />
+      <root url="jar://$PROJECT_DIR$/testsuite/lib/oscore-2.2.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/testsuite/lib/jasper-runtime.jar!/" />
+      <root url="jar://$PROJECT_DIR$/testsuite/lib/httpunit-1.6.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
