@@ -21,7 +21,7 @@ public abstract class BaseWebAppDecorator implements Decorator {
 
     /**
      * More convenient version of {@link #render(com.opensymphony.sitemesh.Content, com.opensymphony.sitemesh.SiteMeshContext)}
-     * suited for Servlet API calls. 
+     * suited for Servlet API calls.
      */
     protected abstract void render(Content content, HttpServletRequest request, HttpServletResponse response,
                                    ServletContext servletContext, SiteMeshWebAppContext webAppContext)
