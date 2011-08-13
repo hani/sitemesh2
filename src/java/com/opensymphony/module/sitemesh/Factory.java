@@ -43,12 +43,12 @@ public abstract class Factory implements PageParserSelector {
             String factoryClass = getEnvEntry("sitemesh.factory", "com.opensymphony.module.sitemesh.factory.DefaultFactory");
             try {
                 Class cls = ClassLoaderUtil.loadClass(factoryClass, config.getClass());
-                Constructor con = cls.getConstructor(new Class[] { Config.class });
-                instance = (Factory)con.newInstance(new Config[] { config });
+                Constructor con = cls.getConstructor(Config.class);
+                instance = (Factory)con.newInstance(config);
                 config.getServletContext().setAttribute(SITEMESH_FACTORY, instance);
             } catch (InvocationTargetException e) {
                 throw new FactoryException("Cannot construct Factory : " + factoryClass, e.getTargetException());
-        
+
             } catch (Exception e) {
                 throw new FactoryException("Cannot construct Factory : " + factoryClass, e);
             }

@@ -37,7 +37,7 @@ import java.util.*;
  *  &lt;/context-param&gt;
  * </pre>
  * </p>
- * 
+ *
  * @author <a href="mailto:joe@truemesh.com">Joe Walnes</a>
  * @author <a href="mailto:pathos@pandora.be">Mathias Bogaert</a>
  * @version $Revision: 1.8 $
@@ -68,7 +68,7 @@ public class DefaultFactory extends BaseFactory {
         if(initParamConfigFile != null) {
           configFileName = initParamConfigFile;
         }
-        
+
         String configFilePath = config.getServletContext().getRealPath(configFileName);
 
         if (configFilePath != null) { // disable config auto reloading for .war files
@@ -143,7 +143,7 @@ public class DefaultFactory extends BaseFactory {
             is = config.getServletContext().getResourceAsStream(configFileName);
         }
         else if (configFile.exists() && configFile.canRead()) {
-            is = configFile.toURL().openStream();
+            is = configFile.toURI().toURL().openStream();
         }
 
         if (is == null){ // load the default sitemesh configuration
@@ -181,7 +181,7 @@ public class DefaultFactory extends BaseFactory {
             is = config.getServletContext().getResourceAsStream(excludesFileName);
         }
         else if (excludesFile.exists() && excludesFile.canRead()) {
-            is = excludesFile.toURL().openStream();
+            is = excludesFile.toURI().toURL().openStream();
         }
 
         if (is == null){
@@ -299,7 +299,7 @@ public class DefaultFactory extends BaseFactory {
             String key = (String) entry.getKey();
             int idx;
             while ((idx = str.indexOf(key)) >= 0) {
-                StringBuffer buf = new StringBuffer(100);
+                StringBuilder buf = new StringBuilder(100);
                 buf.append(str.substring(0, idx));
                 buf.append(entry.getValue());
                 buf.append(str.substring(idx + key.length()));
