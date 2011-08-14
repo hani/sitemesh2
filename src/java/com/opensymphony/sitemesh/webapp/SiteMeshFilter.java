@@ -90,12 +90,6 @@ public class SiteMeshFilter implements Filter {
             if (!containerTweaks.shouldIgnoreIllegalStateExceptionOnErrorPage()) {
                 throw e;
             }
-        } catch (RuntimeException e) {
-            if (containerTweaks.shouldLogUnhandledExceptions()) {
-                // Some containers (such as Tomcat 4) swallow RuntimeExceptions in filters.
-                servletContext.log("Unhandled exception occurred whilst decorating page", e);
-            }
-            throw e;
         } catch (ServletException e) {
             request.setAttribute(ALREADY_APPLIED_KEY, null);
             throw e;
